@@ -24,6 +24,10 @@ _This rule is currently **{{lint.maturity}}**._
   {% assign set_link = set %}
 {% endif %}
 
+{% if lint.fixStatus == "hasFix" %}
+_This rule has a [quick fix](#quick-fixes) available._
+{% endif %}
+
 {%- capture rule_set -%}
 [{{set}}](#{{set_link}}){% if forloop.last == false %},{% endif %}
 {% endcapture %}
